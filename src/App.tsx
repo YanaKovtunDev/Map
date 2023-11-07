@@ -12,7 +12,7 @@ const render = (status: Status): ReactElement => {
 };
 
 const MyApp = () => {
-  const apiKey = "AIzaSyApbLm--Ad4o-L0w_GDU53AxJF9rlySUvM";
+  const apiKey = process.env.REACT_APP_API_KEY;
   const [clicks, setClicks] = useState<google.maps.LatLng[]>([]);
   const [zoom, setZoom] = useState(3); // initial zoom
   const [center, setCenter] = useState<google.maps.LatLngLiteral>({
